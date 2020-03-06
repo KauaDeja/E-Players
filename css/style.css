@@ -83,16 +83,26 @@ header img{
 }
 .partidas .container{
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: wrap;
+    
+}
+
+.proximas_partidas{
+    display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    flex-flow: wrap;
 }
 .partida{
     padding: 0 0 10px 0;
 }
+.partida i{
+    margin-right: 5px;
+}
 .partida img{
     width: 40px;
-    
+    padding: 0 10px;
 }
 .partida h2{
     font-size: 14px;
@@ -128,7 +138,7 @@ header img{
 
 }
 .ligas img{
-    height: 120px;
+    height: 100px;
     
 }
 
@@ -175,14 +185,14 @@ display: flex;
     position: absolute;
     z-index: 99;
     top:-20px;
-    left: 100px;
+    left: 300px;
     width: 100%;
-    max-width: 35%;
+    max-width: 25%;
     
 }
 .texto_sobre{
     width: 40%;
-    margin-right: 100px;
+    margin-right: 300px;
     text-align: right;
     text-shadow: 0px 3px 3px #000000;
 }
@@ -275,6 +285,9 @@ display: flex;
     font-size: 2.2em;
     margin: 0.1em 0;
 }
+footer nav li{
+    margin-bottom: 0.5;
+}
 
 footer{
     background-color: black;
@@ -307,7 +320,7 @@ footer nav a{
 }
 
 footer nav a:hover{
-    border-bottom: solid 1.5px var(--pink)
+    border-bottom: solid 1px var(--pink)
 }
 /*Icones rodapé*/
 
@@ -351,7 +364,6 @@ footer form input{
     border: none;
     text-decoration: none;
     padding: 0.58em 2em;
-    outline: none;
     cursor: pointer;
 }
 footer p{
@@ -434,4 +446,63 @@ select{
 .campo .btn{
     margin:  2em auto;
 }
+
+/* Início Responsividade*/
+/*1200px*/
+
+@media(max-width:800px){
+   .container{
+       width: 90%;
+   }
+   header .container img{
+       max-width: 180px;
+   }
+   .partida .container{
+       flex-flow: nowrap;
+       align-items: flex-start;
+   }
+
+    .em_andamento{
+        width: 30%;
+
+    }
+
+    .proximas_partidas{
+        width: 70%;
+        flex-flow: wrap;
+
+    }
+    .liga h4{
+        font-size: 30px;
+    }
+    .liga h3{
+        font-size: 60px;
+    }
+    .liga img{
+        height: 90px;
+    }
+    .sobre img{
+        max-width: 50%;
+        left: 20px;
+        margin-top: 120px;
+    }
+    .texto_sobre{
+        width: 50%;
+        margin-right: 30px;
+    }
+
+    .content{
+        margin-top: 30px;
+    }
+
+    .card img{
+        margin-top: 3em;
+        margin-left: 1em;
+    }
+
+    .resultado p{
+        margin-top: 0.5em;
+    }
+}/*Fim Media Query 800px*/
+
 
